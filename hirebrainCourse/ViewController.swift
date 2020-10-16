@@ -7,14 +7,16 @@
 //
 
 import UIKit
+import SafariServices
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         if let url = URL(string: "https://learn.hirebrain.com") {
-            UIApplication.shared.open(url)
+
+            let vc = SFSafariViewController(url: url)
+            present(vc, animated: true, completion: nil)
         }
     }
 }
