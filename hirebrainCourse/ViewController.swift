@@ -13,9 +13,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        if let url = URL(string: "https://learn.hirebrain.com") {
+
+        // Learn
+        if let url = URL(string: "https://sandbox.hirebrain.com") {
             UIApplication.shared.open(url)
         }
+
+        // logout URL
+        // https://sandbox.hirebrain.com/users/logout
     }
 }
-
