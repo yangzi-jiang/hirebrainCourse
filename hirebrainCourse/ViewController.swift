@@ -8,18 +8,32 @@
 
 import UIKit
 
+private struct WelcomeContent {
+    static let loginURL = "https://learn.hirebrain.com"
+    static let logoutURL = "https://learn.hirebrain.com/users/logout"
+}
+
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var loginButton: UIButton!
+    
+    @IBOutlet weak var logoutButton: UIButton!
+
+    @IBOutlet weak var hirebrainLogo: UIImageView!
+
+    @IBAction func loginButtonPressed(_ sender: UIButton) {
+        if let url = URL(string: WelcomeContent.loginURL) {
+            UIApplication.shared.open(url)
+        }
+    }
+    @IBAction func logoutButtonPressed(_ sender: UIButton) {
+        if let url = URL(string: WelcomeContent.logoutURL) {
+            UIApplication.shared.open(url)
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-
-        // Learn
-        if let url = URL(string: "https://sandbox.hirebrain.com") {
-            UIApplication.shared.open(url)
-        }
-
-        // logout URL
-        // https://sandbox.hirebrain.com/users/logout
+        logoutButton.layer.cornerRadius = 4
     }
 }

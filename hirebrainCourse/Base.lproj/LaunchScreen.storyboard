@@ -15,12 +15,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3o9-p2-Wik">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashScreen" translatesAutoresizingMaskIntoConstraints="NO" id="3o9-p2-Wik">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hirebrain-mark-white" translatesAutoresizingMaskIntoConstraints="NO" id="0j0-tQ-huc">
+                                <rect key="frame" x="126.5" y="335.5" width="161" height="225"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="0j0-tQ-huc" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ITY-3u-Tbb"/>
+                            <constraint firstItem="0j0-tQ-huc" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="LXy-pF-n0g"/>
                             <constraint firstItem="3o9-p2-Wik" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Y0h-xz-C42"/>
                             <constraint firstItem="3o9-p2-Wik" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ahm-wt-zIE"/>
                             <constraint firstItem="3o9-p2-Wik" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ctg-Gd-kSj"/>
@@ -34,4 +39,8 @@
             <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Hirebrain-mark-white" width="161" height="225"/>
+        <image name="SplashScreen" width="449.5" height="741"/>
+    </resources>
 </document>
