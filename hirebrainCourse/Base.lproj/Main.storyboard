@@ -15,49 +15,70 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gaq-Ja-ZcQ" userLabel="Login Button">
-                                <rect key="frame" x="0.0" y="618" width="375" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Continue HireBrain"/>
-                                <connections>
-                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ld3-Nc-gDq"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GDt-14-Cfx">
-                                <rect key="frame" x="162" y="659" width="95" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mnu-5S-qHk">
-                                        <rect key="frame" x="20" y="20" width="55" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Log Out"/>
-                                        <connections>
-                                            <action selector="logoutButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a49-XI-2ua"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashScreen" translatesAutoresizingMaskIntoConstraints="NO" id="XXo-ez-P5k">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YZ9-le-ZGM">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="204"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="GUA-4b-z7s">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Hirebrain-logo-white" translatesAutoresizingMaskIntoConstraints="NO" id="wUg-au-dAQ">
-                                        <rect key="frame" x="30" y="61" width="315" height="82"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YZ9-le-ZGM" userLabel="LogoView">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="209"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Hirebrain-logo-white" translatesAutoresizingMaskIntoConstraints="NO" id="wUg-au-dAQ">
+                                                <rect key="frame" x="30" y="61" width="315" height="82"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dXy-rL-XGk" userLabel="LoginView">
+                                        <rect key="frame" x="0.0" y="229" width="375" height="209"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gaq-Ja-ZcQ" userLabel="Login Button">
+                                                <rect key="frame" x="119" y="167" width="137" height="32"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <state key="normal" title="Continue HireBrain"/>
+                                                <connections>
+                                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ld3-Nc-gDq"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Gaq-Ja-ZcQ" secondAttribute="bottom" constant="10" id="JGZ-Sx-tib"/>
+                                            <constraint firstItem="Gaq-Ja-ZcQ" firstAttribute="centerX" secondItem="dXy-rL-XGk" secondAttribute="centerX" id="yih-4l-QJC"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GDt-14-Cfx" userLabel="LogoutView">
+                                        <rect key="frame" x="0.0" y="458" width="375" height="209"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mnu-5S-qHk">
+                                                <rect key="frame" x="158" y="10" width="59" height="32"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                <state key="normal" title="Log Out">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="logoutButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a49-XI-2ua"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="mnu-5S-qHk" firstAttribute="centerX" secondItem="GDt-14-Cfx" secondAttribute="centerX" id="97d-PZ-0Sy"/>
+                                            <constraint firstItem="mnu-5S-qHk" firstAttribute="top" secondItem="GDt-14-Cfx" secondAttribute="top" constant="10" id="Jn3-v2-URU"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                            </view>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="XXo-ez-P5k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3cZ-OZ-BDB"/>
                             <constraint firstItem="XXo-ez-P5k" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="AGR-dr-hTF"/>
+                            <constraint firstItem="GUA-4b-z7s" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="GFH-qW-f0a"/>
                             <constraint firstItem="XXo-ez-P5k" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Hne-iT-VGT"/>
+                            <constraint firstItem="GUA-4b-z7s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IWF-pn-jvO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GUA-4b-z7s" secondAttribute="bottom" id="VJh-sl-tVR"/>
                             <constraint firstItem="XXo-ez-P5k" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="cDA-nP-aeT"/>
+                            <constraint firstItem="GUA-4b-z7s" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="lX1-GM-oc8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

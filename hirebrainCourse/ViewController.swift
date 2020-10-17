@@ -16,7 +16,7 @@ private struct WelcomeContent {
 class ViewController: UIViewController {
     
     @IBOutlet weak var loginButton: UIButton!
-    
+
     @IBOutlet weak var logoutButton: UIButton!
 
     @IBOutlet weak var hirebrainLogo: UIImageView!
@@ -34,6 +34,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        logoutButton.layer.cornerRadius = 4
+        loginButton.tintColor = UIColor.black
+        loginButton.backgroundColor = UIColor.lightGray
+        loginButton.layer.cornerRadius = 4
     }
 }
