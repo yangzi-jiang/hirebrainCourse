@@ -34,7 +34,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginButton.titleLabel?.font = UIFont(name: "Freight Sans Pro", size: 18)
+        loginButton.titleLabel?.font = UIFont(name: "Freight Sans Pro", size: 20)
         loginButton.layer.cornerRadius = 6
+
+        logoutButton.titleLabel?.font = UIFont(name: "Freight Sans Pro", size: 16)
+
     }
 }
