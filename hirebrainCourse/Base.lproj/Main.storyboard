@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,20 +12,20 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="hirebrainCourse" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashScreen" translatesAutoresizingMaskIntoConstraints="NO" id="XXo-ez-P5k">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="GUA-4b-z7s">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YZ9-le-ZGM" userLabel="LogoView">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="209"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="231.33333333333334"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hirebrain-logo-white" translatesAutoresizingMaskIntoConstraints="NO" id="wUg-au-dAQ">
-                                                <rect key="frame" x="20" y="63.5" width="335" height="82"/>
+                                                <rect key="frame" x="20" y="74.666666666666671" width="335" height="82.000000000000014"/>
                                             </imageView>
                                         </subviews>
                                         <constraints>
@@ -35,11 +35,14 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dXy-rL-XGk" userLabel="LoginView">
-                                        <rect key="frame" x="0.0" y="229" width="375" height="209"/>
+                                        <rect key="frame" x="0.0" y="251.33333333333331" width="375" height="231.33333333333331"/>
                                         <subviews>
-                                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gaq-Ja-ZcQ" userLabel="Login Button">
-                                                <rect key="frame" x="50" y="167" width="275" height="32"/>
+                                            <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gaq-Ja-ZcQ" userLabel="Login Button">
+                                                <rect key="frame" x="64" y="175.33333333333337" width="247" height="46"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="46" id="3CV-vG-Qzg"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                 <state key="normal" title="Let's HireBrain">
                                                     <color key="titleColor" red="0.3288114667" green="0.32523137330000002" blue="0.50982534889999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -51,12 +54,12 @@
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="Gaq-Ja-ZcQ" secondAttribute="bottom" constant="10" id="JGZ-Sx-tib"/>
-                                            <constraint firstItem="Gaq-Ja-ZcQ" firstAttribute="leading" secondItem="dXy-rL-XGk" secondAttribute="leading" constant="50" id="KYM-xi-XRW"/>
+                                            <constraint firstItem="Gaq-Ja-ZcQ" firstAttribute="leading" secondItem="dXy-rL-XGk" secondAttribute="leading" constant="64" id="KYM-xi-XRW"/>
                                             <constraint firstItem="Gaq-Ja-ZcQ" firstAttribute="centerX" secondItem="dXy-rL-XGk" secondAttribute="centerX" id="yih-4l-QJC"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GDt-14-Cfx" userLabel="LogoutView">
-                                        <rect key="frame" x="0.0" y="458" width="375" height="209"/>
+                                        <rect key="frame" x="0.0" y="502.66666666666657" width="375" height="231.33333333333331"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mnu-5S-qHk">
                                                 <rect key="frame" x="157" y="10" width="61" height="32"/>
@@ -102,7 +105,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Hirebrain-logo-white" width="550.5" height="82"/>
-        <image name="SplashScreen" width="449.5" height="741"/>
+        <image name="Hirebrain-logo-white" width="550.33331298828125" height="82"/>
+        <image name="SplashScreen" width="449.66665649414062" height="741"/>
     </resources>
 </document>
