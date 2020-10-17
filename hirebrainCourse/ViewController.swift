@@ -9,7 +9,7 @@
 import UIKit
 
 private struct WelcomeContent {
-    static let loginURL = "https://sandbox.hirebrain.com"
+    static let loginURL = "https://learn.hirebrain.com"
     static let logoutURL = "https://learn.hirebrain.com/users/logout"
 }
 
@@ -34,8 +34,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginButton.tintColor = UIColor.black
-        loginButton.backgroundColor = UIColor.lightGray
+        loginButton.titleLabel?.font = UIFont(name: "Freight Sans Pro", size: 18)
         loginButton.layer.cornerRadius = 6
     }
 }
