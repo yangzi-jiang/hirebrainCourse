@@ -11,7 +11,7 @@ import UIKit
 private struct WelcomeContent {
     static let deployment = false
     static let loginURL = deployment ? "https://learn.hirebrain.com" : "https://sandbox.hirebrain.com"
-    static let logoutURL = deployment ? "https://learn.hirebrain.com/users/logout" : "https://sandbox.hirebrain.com"
+    static let logoutURL = deployment ? "https://learn.hirebrain.com/users/logout" : "https://sandbox.hirebrain.com/users/logout"
 }
 
 class ViewController: UIViewController {
