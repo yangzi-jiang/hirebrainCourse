@@ -9,14 +9,15 @@
 import UIKit
 
 private struct WelcomeContent {
-    static let loginURL = "https://learn.hirebrain.com"
-    static let logoutURL = "https://learn.hirebrain.com/users/logout"
+    static let deployment = false
+    static let loginURL = deployment ? "https://learn.hirebrain.com" : "https://sandbox.hirebrain.com"
+    static let logoutURL = deployment ? "https://learn.hirebrain.com/users/logout" : "https://sandbox.hirebrain.com/users/logout"
 }
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var loginButton: UIButton!
-    
+
     @IBOutlet weak var logoutButton: UIButton!
 
     @IBOutlet weak var hirebrainLogo: UIImageView!
@@ -34,6 +35,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        logoutButton.layer.cornerRadius = 4
+        loginButton.titleLabel?.font = UIFont(name: "Freight Sans Pro", size: 20)
+        loginButton.layer.cornerRadius = 6
+
+        logoutButton.titleLabel?.font = UIFont(name: "Freight Sans Pro", size: 16)
+
     }
 }
